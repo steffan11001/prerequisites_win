@@ -8,7 +8,7 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/in
 # Install .NET Core SDK and runtime
 choco install -y dotnet-sdk
 choco install -y dotnetcore-runtime
-choco upgrade dotnet
+choco upgrade -y dotnet
 
 # Install Git
 choco install -y git
