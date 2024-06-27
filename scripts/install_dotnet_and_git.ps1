@@ -6,8 +6,9 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; `
 iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
 # Install .NET Core SDK and runtime
-choco install -y dotnetcore-sdk
+choco install -y dotnet-sdk
 choco install -y dotnetcore-runtime
+choco upgrade dotnet
 
 # Install Git
 choco install -y git

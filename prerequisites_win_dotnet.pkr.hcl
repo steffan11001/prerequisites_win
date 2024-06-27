@@ -15,7 +15,7 @@ variable "region" {
 locals { timestamp = regex_replace(timestamp(), "[- TZ:]", "") }
 
 source "amazon-ebs" "prerequisites-win-dotnet" {
-  ami_name       = "prerequisites_win_dotnet"
+  ami_name       = "prerequisites-win-dotnet-${local.timestamp}"
   communicator   = "winrm"
   instance_type  = "t3.micro"
   region         = "${var.region}"
